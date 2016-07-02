@@ -121,9 +121,11 @@ public class Calculator {
 	public String getParent (){
 		Iterator<Union> it = parent.iterator();
 		String s_parent = "";
-		 
+		
+                if (it.hasNext())
+                    s_parent = it.next().toString();
 		while (it.hasNext())
-			s_parent += it.next().toString() + " ";
+			s_parent += " " + it.next().toString();
 		
 		return s_parent;
 	}
